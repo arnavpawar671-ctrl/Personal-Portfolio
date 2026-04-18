@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Portfolio — Arnav</title>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+        <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+</head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<video id="bg-video" class="bg-video" autoplay muted loop playsinline>
+			<source src="bg.mp4" type="video/mp4">
+			<!-- fallback text -->
+		</video>
+
+		<div class="animated-bg" aria-hidden="true"></div>
+
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#">Arnav</a>
+				<nav class="nav">
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-inner">
+					<h1 class="name">Arnav — UI Designer & Developer</h1>
+					<h2 class="subtitle">I build <span id="type"></span></h2>
+					<p class="lead">I am 9th Grade school student, who is learning a lot of stuff about coding, experimenting with tecnologies, You can see my hand-written projects through this below "See Projects" Button.</p>
+					<div class="cta">
+						<a class="btn" href="https://github.com/arnavpawar671-ctrl">See Projects</a>
+						<a class="btn ghost" href="https://bsky.app/profile/arnavpawar671.bsky.social">Get In Touch</a>
+					</div>
+				</div>
+			</section>
+            <section id="about" class="section about reveal">
+				<div id="about" class="container">
+					<h3 class="center-line">About</h3>
+					<p class="center-text">I'm Arnav, A dedicated and results-oriented developer with a robust foundation in modern software engineering principles, 
+                        I possess comprehensive proficiency across the full development stack. My expertise encompasses architecting scalable backend systems using technologies such as Python and Java, complemented by a meticulous understanding of front-end frameworks like React for creating intuitive and highly performant user interfaces. I approach complex technical challenges not merely as coding problems, but as opportunities to engineer elegant, efficient, and maintainable solutions. My commitment extends beyond mere functionality; I strive to build robust, scalable architectures that directly address core business needs, consistently delivering high-quality, thoroughly tested, and industry-leading software products.</p>
+                        <p>🔭 I’m currently working on Developing software and more!</p>
+                        <p>👯 I’m looking to collaborate on C++</p>
+                        <p></p>🤝 I’m looking for help with any coding problems</p>
+                        <p>🌱 I’m currently learning C++, C#</p>
+                        <p>💬 Ask me about anything</p>
+                        <p>⚡ Fun fact that I am a EA developer</p
+				</div>
+			</section>
+            <section id="projects" class="section projects">
+				<div class="container">
+					<h3>Featured Projects</h3>
+					<div class="grid">
+						<article class="card reveal gh-card">
+							<div class="card-body">
+								<h4>My GitHub</h4>
+								<p>Explore my repositories and open-source projects on GitHub.</p>
+								<a class="link" href="https://github.com/arnavpawar671-ctrl" target="_blank" rel="noopener">View profile</a>
+							</div>
+						</article>
+						<article class="card reveal">
+							<div class="card-body">
+								<h4>Minimal Notes</h4>
+								<p>Lightweight note app with beautiful mono typography and offline-first syncing.</p>
+								<a class="link" href="#">View</a>
+							</div>
+						</article>
+
+						<article class="card reveal">
+							<div class="card-body">
+								<h4>Pixel Garden</h4>
+								<p>Generative visuals with responsive controls and subtle physics.</p>
+								<a class="link" href="#">View</a>
+							</div>
+						</article>
+
+						<article class="card reveal">
+							<div class="card-body">
+								<h4>Portfolio Engine</h4>
+								<p>Fast, accessible portfolio starter tuned for type-driven design.</p>
+								<a class="link" href="#">View</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="github" class="section github reveal">
+				<div class="container">
+					<h3>GitHub Profile</h3>
+					<div id="gh-profile" class="gh-profile"></div>
+					<h4 style="margin-top:1.5rem">Repositories</h4>
+					<div class="repo-controls">
+						<input id="repo-filter" placeholder="Filter repos by name or language" />
+						<button id="clear-filter" class="btn ghost">Clear</button>
+					</div>
+					<div id="repo-list" class="grid"></div>
+				</div>
+			</section>
+
+			<section id="contact" class="section contact reveal">
+                <div class="container">
+                <div style="text-align:center">
+                     <h2>Contact Us</h2>
+                <p>Swing by for a cup of coffee, or leave us a message:</p>
+                </div>
+            <div class="row">
+            <div class="column">
+                <img src="image.png" style="width:100%">
+            </div>
+            <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+               <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+		</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">© <span id="year"></span> Arnav — Crafted with a monospaced heart.</div>
+		</footer> -->
+		<div id="md-modal" class="md-modal" aria-hidden="true">
+		  <div class="md-panel">
+		    <button id="md-close" class="btn ghost">Close</button>
+		    <div id="md-content" class="md-content">Loading…</div>
+		  </div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

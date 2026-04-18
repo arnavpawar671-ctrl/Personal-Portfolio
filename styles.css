@@ -1,0 +1,187 @@
+:root{
+  --bg:#0b0f12;
+  --glass: rgba(255,255,255,0.04);
+  --muted: #94a3b8;
+  --accent: #7dd3fc;
+  --accent-2: #8b5cf6;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  background:var(--bg);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.animated-bg{
+  position:fixed;inset:0;z-index:-1;filter:blur(30px);
+  background:linear-gradient(120deg, rgba(125,211,252,0.08), rgba(139,92,246,0.06), rgba(59,130,246,0.05));
+  background-size:300% 300%;
+  animation:moveBG 18s ease-in-out infinite;
+}
+@keyframes moveBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:600;color:var(--accent);text-decoration:none;font-size:1.1rem}
+.nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.nav a:hover{color:var(--accent)}
+
+.nav a.gh{padding:.3rem .6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--accent);margin-left:1rem}
+.gh-card .card-body{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.gh-card .link{margin-top:1rem}
+
+/* GitHub profile styles */
+.gh-profile{display:flex;align-items:center;gap:1rem;padding:1rem 0}
+.gh-profile img{width:88px;height:88px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.04)}
+.gh-meta{color:var(--muted)}
+.gh-meta h4{margin:.2rem 0}
+.gh-stats{display:flex;gap:.75rem;margin-top:.5rem}
+.gh-stat{background:rgba(255,255,255,0.03);padding:.4rem .6rem;border-radius:8px;font-weight:600;color:var(--muted)}
+.repo-meta{display:flex;gap:.6rem;align-items:center;color:var(--muted);font-size:.9rem;margin-top:.6rem}
+.repo-language{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);}
+.repo-card .card-body{display:flex;flex-direction:column}
+.repo-card .link{margin-top:auto}
+
+/* repo filter */
+.repo-controls{display:flex;gap:.5rem;align-items:center;margin-top:.6rem}
+.repo-controls input{flex:1;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+/* modal for README */
+.md-modal{position:fixed;inset:0;background:rgba(3,5,8,0.6);display:none;align-items:center;justify-content:center;padding:2rem;z-index:60}
+.md-modal.open{display:flex}
+.md-panel{background:linear-gradient(180deg, rgba(6,8,12,0.98), rgba(8,10,14,0.98));max-width:900px;width:100%;border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,0.03);box-shadow:0 20px 60px rgba(2,6,23,0.8)}
+.md-content{max-height:70vh;overflow:auto;padding:1rem;background:transparent;color:var(--muted);font-family:JetBrains Mono, monospace}
+.md-content h1,.md-content h2,.md-content h3{color:#fff}
+.md-content pre{background:rgba(255,255,255,0.02);padding:1rem;border-radius:8px;overflow:auto}
+
+.hero{display:flex;align-items:center;min-height:72vh}
+.hero-inner{padding:4rem 0}
+.name{font-size:2rem;margin:0;font-weight:600;letter-spacing:0.6px}
+.subtitle{margin:.5rem 0;color:var(--muted);font-weight:300}
+.lead{color:var(--muted);max-width:60ch}
+
+.cta{margin-top:1.25rem}
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#081124;text-decoration:none;font-weight:600;margin-right:.6rem;box-shadow:0 6px 18px rgba(11,15,18,0.6);transition:transform .18s ease}
+.btn:hover{transform:translateY(-3px)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+.section{padding:6rem 0}
+.about p{max-width:70ch;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem;align-items:stretch}
+.card{background:var(--glass);border-radius:12px;padding:1.25rem;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column;position:relative;overflow:hidden;z-index:1}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(2,6,23,0.6)}
+.card h4{margin:.1rem 0 .5rem 0}
+.link{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* ensure card body grows so actions sit at bottom */
+.card .card-body{display:flex;flex-direction:column;flex:1}
+
+/* actions inside repo cards */
+.repo-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:0.9rem}
+.repo-actions .btn{padding:.45rem .6rem;font-size:.92rem}
+.copy-clone{min-width:96px}
+.md-open{min-width:72px}
+
+.site-footer{padding:2rem 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media (max-width:640px){
+  .header-inner{padding:0 1rem}
+  .name{font-size:1.4rem}
+  .container{padding:1rem}
+}
+
+/* small accessibility tweaks */
+a:focus{outline:2px solid rgba(125,211,252,0.18);outline-offset:3px}
+
+/* background video */
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:0.7}
+.no-video .bg-video{display:none}
+
+h1 {
+  font-family: "Playwrite NO", cursive;
+  font-size: 50px;
+}
+
+.contact{
+    align-items: center;
+    animation: moveBG 18s ease-in-out infinite;
+}
+
+.div .social{
+color:var(--muted);
+text-decoration:none;
+margin-left:1re;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-line{
+    text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  background:var(--glass);border-radius:12px;padding:1.25rem;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column;position:relative;overflow:hidden;z-index:1
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
