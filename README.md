@@ -6,7 +6,7 @@ This project showcases my work, skills, and projects as a student developer.
 ## 🚀 Live Website
 
 Visit my portfolio here:
-https://arnavpawar671-ctrl.github.io/portfolio
+https://arnavpawar671-ctrl.github.io/Personal-Portfolio/
 
 ## 📌 About The Project
 
