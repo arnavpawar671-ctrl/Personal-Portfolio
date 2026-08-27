@@ -94,7 +94,7 @@ Keep experimenting.
 https://github.com/arnavpawar671-ctrl
 
 **Bluesky:**  
-https://bsky.app/profile/arnavpawar671.bsky.social
+https://bsky.app/profile/katekaru1906arnav.bsky.social
 
 ---
 
