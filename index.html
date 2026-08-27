@@ -1,155 +1,486 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Portfolio — Arnav</title>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-        <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+    <title>Arnav — Software Engineer & AI Builder</title>
+    <meta
+        name="description"
+        content="Arnav's personal portfolio — software development, AI experiments, and web projects."
+    >
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-		<link rel="stylesheet" href="styles.css">
-	</head>
-	<body>
-		<video id="bg-video" class="bg-video" autoplay muted loop playsinline>
-			<source src="bg.mp4" type="video/mp4">
-			<!-- fallback text -->
-		</video>
 
-		<div class="animated-bg" aria-hidden="true"></div>
+<body>
 
-		<header class="site-header">
-			<div class="container header-inner">
-				<a class="brand" href="#">Arnav</a>
-				<nav class="nav">
-					<a href="#about">About</a>
-					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
-				</nav>
-			</div>
-		</header>
+    <!-- ================= NAVBAR ================= -->
 
-		<main>
-			<section class="hero">
-				<div class="container hero-inner">
-					<h1 class="name">Arnav — UI Designer & Developer</h1>
-					<h2 class="subtitle">I build <span id="type"></span></h2>
-					<p class="lead">I am 9th Grade school student, who is learning a lot of stuff about coding, experimenting with tecnologies, You can see my hand-written projects through this below "See Projects" Button.</p>
-					<div class="cta">
-						<a class="btn" href="https://github.com/arnavpawar671-ctrl">See Projects</a>
-						<a class="btn ghost" href="https://bsky.app/profile/arnavpawar671.bsky.social">Get In Touch</a>
-					</div>
-				</div>
-			</section>
-            <section id="about" class="section about reveal">
-				<div id="about" class="container">
-					<h3 class="center-line">About</h3>
-					<p class="center-text">I'm Arnav, A dedicated and results-oriented developer with a robust foundation in modern software engineering principles, 
-                        I possess comprehensive proficiency across the full development stack. My expertise encompasses architecting scalable backend systems using technologies such as Python and Java, complemented by a meticulous understanding of front-end frameworks like React for creating intuitive and highly performant user interfaces. I approach complex technical challenges not merely as coding problems, but as opportunities to engineer elegant, efficient, and maintainable solutions. My commitment extends beyond mere functionality; I strive to build robust, scalable architectures that directly address core business needs, consistently delivering high-quality, thoroughly tested, and industry-leading software products.</p>
-                        <p>🔭 I’m currently working on Developing software and more!</p>
-                        <p>👯 I’m looking to collaborate on C++</p>
-                        <p></p>🤝 I’m looking for help with any coding problems</p>
-                        <p>🌱 I’m currently learning C++, C#</p>
-                        <p>💬 Ask me about anything</p>
-                        <p>⚡ Fun fact that I am a EA developer</p
-				</div>
-			</section>
-            <section id="projects" class="section projects">
-				<div class="container">
-					<h3>Featured Projects</h3>
-					<div class="grid">
-						<article class="card reveal gh-card">
-							<div class="card-body">
-								<h4>My GitHub</h4>
-								<p>Explore my repositories and open-source projects on GitHub.</p>
-								<a class="link" href="https://github.com/arnavpawar671-ctrl" target="_blank" rel="noopener">View profile</a>
-							</div>
-						</article>
-						<article class="card reveal">
-							<div class="card-body">
-								<h4>Minimal Notes</h4>
-								<p>Lightweight note app with beautiful mono typography and offline-first syncing.</p>
-								<a class="link" href="#">View</a>
-							</div>
-						</article>
+    <header class="site-header">
+        <nav class="navbar container">
 
-						<article class="card reveal">
-							<div class="card-body">
-								<h4>Pixel Garden</h4>
-								<p>Generative visuals with responsive controls and subtle physics.</p>
-								<a class="link" href="#">View</a>
-							</div>
-						</article>
+            <a href="#home" class="brand">
+                ARNAV<span>.</span>
+            </a>
 
-						<article class="card reveal">
-							<div class="card-body">
-								<h4>Portfolio Engine</h4>
-								<p>Fast, accessible portfolio starter tuned for type-driven design.</p>
-								<a class="link" href="#">View</a>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section id="github" class="section github reveal">
-				<div class="container">
-					<h3>GitHub Profile</h3>
-					<div id="gh-profile" class="gh-profile"></div>
-					<h4 style="margin-top:1.5rem">Repositories</h4>
-					<div class="repo-controls">
-						<input id="repo-filter" placeholder="Filter repos by name or language" />
-						<button id="clear-filter" class="btn ghost">Clear</button>
-					</div>
-					<div id="repo-list" class="grid"></div>
-				</div>
-			</section>
-
-			<section id="contact" class="section contact reveal">
-                <div class="container">
-                <div style="text-align:center">
-                     <h2>Contact Us</h2>
-                <p>Swing by for a cup of coffee, or leave us a message:</p>
-                </div>
-            <div class="row">
-            <div class="column">
-                <img src="image.png" style="width:100%">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="column">
-            <form action="/action_page.php">
-                <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-               <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-</div>
-		</section>
-		</main>
 
-		<footer class="site-footer">
-			<div class="container">© <span id="year"></span> Arnav — Crafted with a monospaced heart.</div>
-		</footer> -->
-		<div id="md-modal" class="md-modal" aria-hidden="true">
-		  <div class="md-panel">
-		    <button id="md-close" class="btn ghost">Close</button>
-		    <div id="md-content" class="md-content">Loading…</div>
-		  </div>
-		</div>
+            <a
+                href="https://github.com/arnavpawar671-ctrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-github"
+            >
+                GitHub ↗
+            </a>
 
-		<script src="script.js"></script>
-	</body>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-content">
+
+                <p class="hero-eyebrow">
+                    SOFTWARE • AI • WEB
+                </p>
+
+                <h1>
+                    Hi, I'm <span>Arnav.</span>
+                    <br>
+                    I build things with code.
+                </h1>
+
+                <p class="hero-description">
+                    I'm a student and developer exploring software engineering,
+                    artificial intelligence, and modern web technologies.
+                    I enjoy turning ideas into real, working projects.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
+
+                    <a
+                        href="https://github.com/arnavpawar671-ctrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-scroll">
+                <span>SCROLL TO EXPLORE</span>
+                <span>↓</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section about">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>01</span>
+                    <h2>About me</h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-intro">
+                        <h3>
+                            Curious about how things work.
+                            Excited to build what comes next.
+                        </h3>
+                    </div>
+
+                    <div class="about-text">
+
+                        <p>
+                            I'm Arnav, a student developer who enjoys
+                            experimenting with technology and building
+                            projects from scratch.
+                        </p>
+
+                        <p>
+                            My interests span software engineering,
+                            artificial intelligence, web development,
+                            and learning how different technologies
+                            work together.
+                        </p>
+
+                        <p>
+                            I believe the best way to learn programming
+                            is to build — so most of my learning happens
+                            through real projects, experiments, and
+                            occasionally breaking things and figuring
+                            out why they broke.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section skills">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>02</span>
+                    <h2>Tech stack</h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <span>01</span>
+                        <h3>Languages</h3>
+                        <p>
+                            Python · JavaScript · TypeScript · C++ · C#
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <span>02</span>
+                        <h3>Web</h3>
+                        <p>
+                            HTML · CSS · React · Vite · Responsive UI
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <span>03</span>
+                        <h3>Backend</h3>
+                        <p>
+                            Python · FastAPI · REST APIs · SQLite
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <span>04</span>
+                        <h3>AI & Tools</h3>
+                        <p>
+                            LLMs · Git · GitHub · VS Code · APIs
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>03</span>
+                    <h2>Selected projects</h2>
+                </div>
+
+                <p class="section-description">
+                    A few things I've built, experimented with,
+                    or am currently developing.
+                </p>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card featured">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                AI • SOFTWARE
+                            </p>
+
+                            <h3>Nova AI</h3>
+
+                            <p>
+                                An AI assistant project exploring
+                                conversational AI, multiple model
+                                providers, memory, and a modern
+                                desktop experience.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>AI</span>
+                            </div>
+
+                            <a href="#" class="project-link">
+                                View project ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                WEB • BUSINESS
+                            </p>
+
+                            <h3>Rajmudra Enterprises</h3>
+
+                            <p>
+                                A modern business website focused on
+                                premium visual design, responsive
+                                layouts, and interactive web experiences.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a href="#" class="project-link">
+                                View project ↗
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-type">
+                                EXPERIMENT
+                            </p>
+
+                            <h3>More coming soon</h3>
+
+                            <p>
+                                I'm constantly experimenting with new
+                                technologies and building new ideas.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Building</span>
+                                <span>Learning</span>
+                                <span>Exploring</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= JOURNEY ================= -->
+
+        <section id="journey" class="section journey">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>04</span>
+                    <h2>My journey</h2>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-year">01</span>
+
+                        <div>
+                            <h3>Started coding</h3>
+                            <p>
+                                Began exploring programming and
+                                learning how software is created.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-year">02</span>
+
+                        <div>
+                            <h3>Web development</h3>
+                            <p>
+                                Started building websites and learning
+                                how frontend and backend systems work.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-year">03</span>
+
+                        <div>
+                            <h3>Exploring AI</h3>
+                            <p>
+                                Started experimenting with APIs,
+                                language models, assistants, and
+                                AI-powered applications.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-year">04</span>
+
+                        <div>
+                            <h3>What's next?</h3>
+                            <p>
+                                Keep learning, keep building,
+                                and turn bigger ideas into real products.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section contact">
+
+            <div class="container contact-content">
+
+                <div class="section-heading">
+                    <span>05</span>
+                    <h2>Let's connect</h2>
+                </div>
+
+                <h3>
+                    Have an idea?
+                    <br>
+                    Let's build something.
+                </h3>
+
+                <p>
+                    I'm always interested in learning, experimenting,
+                    and connecting with people who enjoy building things.
+                </p>
+
+                <div class="contact-links">
+
+                    <a
+                        href="https://github.com/arnavpawar671-ctrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://bsky.app/profile/arnavpawar671.bsky.social"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Bluesky ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <span>
+                © <span id="year"></span> Arnav
+            </span>
+
+            <span>
+                Built with code & curiosity.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
